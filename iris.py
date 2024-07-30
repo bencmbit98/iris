@@ -46,7 +46,7 @@ elif feature == 'K-Means Clustering':
   k = st.slider('Select number of clusters (k) ', 2, 10, 3)
 
   # Perform K-Means clustering
-  kmeans = KMeans(n_clusters = k, n_init='auto', random_state = 42)
+  kmeans = KMeans(n_clusters = k, random_state = 42)
   iris['cluster'] = kmeans.fit_predict(X_scaled)
 
   # Visualise cluster
